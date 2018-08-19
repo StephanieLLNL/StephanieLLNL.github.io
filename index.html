@@ -30,9 +30,10 @@ old */
 div.shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }    
-div.double {
-    border-width:10px;  
-    border-style:double;
+div.paddedborder {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
 }    
     
 /* Next & previous buttons */
@@ -319,7 +320,7 @@ blended with #2-->
 
 <!-- slideshow container 2 -->
 
-<div class="slideshow-container w3-border shadow double">
+<div class="slideshow-container w3-border shadow paddedborder">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
