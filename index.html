@@ -298,8 +298,19 @@ body, html {
 <!-- Play container -->  
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY PLAY TIME</h3>
+<!-- slideshow container 1 -->    
+    
+    <div class="w3-content w3-section" style="max-width:500px">
+  <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
 
-<!-- slideshow container -->
+  <img class="mySlides w3-animate-fading" src="img_rr_01.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img_rr_02.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img_rr_03.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img_rr_04.jpg" style="width:100%">
+</div>
+
+
+<!-- slideshow container 2 -->
 
 <div class="slideshow-container w3-border">
 
@@ -384,9 +395,26 @@ body, html {
   </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
- 
 
-<!-- Add slide show -->
+<!-- Add slide show 1 -->
+<script>
+    var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
+
+<!-- Add slide show 2 -->
 <script>
 var slideIndex = 1;
 showSlides(slideIndex);
